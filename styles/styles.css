@@ -17,6 +17,10 @@ h1 {
 
 #password-el {
     color:  #ffffff;
+    font-size: 1.2rem;
+    padding: 4px;
+    border: 3px solid #428bca;
+    border-radius: 5px;
 }
 
 button {
