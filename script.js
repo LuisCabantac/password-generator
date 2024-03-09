@@ -6,9 +6,9 @@ function getRandomNumber() {
     return randomNumber;
 }
 
-function generatePassword() {
+function getTwelveCharacters() {
     let password = "";
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 12; i++) {
         let generateNumber = getRandomNumber()
         password += characters[generateNumber];
     }
