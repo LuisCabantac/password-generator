@@ -16,12 +16,15 @@ h1 {
     font-size: 1.2rem;
 }
 
-#password-el {
-    color:  #ffffff;
+.pass-generator-reset-section input {
+    border: none;
     font-size: 1.2rem;
     padding: 6px 8px;
     border-radius: 5px;
+    color: #ffffff;
     background-color: #30363b;
+    width: 400px;
+    margin-right: 5px;
 }
 
 button {
