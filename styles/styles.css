@@ -22,6 +22,7 @@ h1 {
     padding: 6px 8px;
     border-radius: 5px;
     background-color: #30363b;
+    width: 50rem;
 }
 
 button {
@@ -39,4 +40,10 @@ button:hover {
 
 button:active {
     background-color: #337ab7;
+}
+
+.pass-generator-reset-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
