@@ -12,7 +12,7 @@ function getTwelveCharacters() {
         let generateNumber = getRandomNumber()
         password += characters[generateNumber];
     }
-    passwordEl.textContent = password;
+    passwordEl.value = password;
 }
 
 function getSixteenCharacters() {
@@ -21,7 +21,7 @@ function getSixteenCharacters() {
         let generateNumber = getRandomNumber()
         password += characters[generateNumber];
     }
-    passwordEl.textContent = password;
+    passwordEl.value = password;
 }
 
 function getTwentyCharacters() {
@@ -30,7 +30,7 @@ function getTwentyCharacters() {
         let generateNumber = getRandomNumber()
         password += characters[generateNumber];
     }
-    passwordEl.textContent = password;
+    passwordEl.value = password;
 }
 
 function getTwentyFourCharacters() {
@@ -39,10 +39,10 @@ function getTwentyFourCharacters() {
         let generateNumber = getRandomNumber()
         password += characters[generateNumber];
     }
-    passwordEl.textContent = password;
+    passwordEl.value = password;
 }
 
 function resetPassword() {
-    let password = "Your password will be generated here...";
-    passwordEl.textContent = password;
+    let password = "";
+    passwordEl.value = password;
 }
