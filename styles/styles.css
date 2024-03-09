@@ -22,7 +22,7 @@ h1 {
     padding: 6px 8px;
     border-radius: 5px;
     background-color: #30363b;
-    width: 50rem;
+    width: 57rem;
 }
 
 button {
@@ -32,6 +32,7 @@ button {
     border-radius: 5px;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
+    margin: 5px;
 }
 
 button:hover {
@@ -40,6 +41,10 @@ button:hover {
 
 button:active {
     background-color: #337ab7;
+}
+
+#reset-btn {
+    background-color: #f7bc1f;
 }
 
 .pass-generator-reset-section {
