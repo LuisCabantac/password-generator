@@ -14,3 +14,8 @@ function generatePassword() {
     }
     passwordEl.textContent = password;
 }
+
+function resetPassword() {
+    let password = "Your password will be generated here...";
+    passwordEl.textContent = password;
+}
