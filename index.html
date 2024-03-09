@@ -11,10 +11,10 @@
     <body>
         <h1>Password Generator</h1>
         <p class="description">Generate random passwords</p>
-        <div class="pass-generator-reset-section">
-            <p id="password-el">Your password will be generated here...</p>
+        <form class="pass-generator-reset-section">
+            <input id="password-el" type="text" placeholder="Your password will be generated here..." required/>
             <button id="reset-btn" onclick="resetPassword()">Reset</button>
-        </div>
+        </form>
         <p class="description">Select the amount of characters that will be generated: </p>
         <div class="btn-section">
             <button onclick="getTwelveCharacters()">12 Characters</button>
