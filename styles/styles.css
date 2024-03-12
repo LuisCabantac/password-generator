@@ -53,3 +53,26 @@ button:active {
     display: flex;
     align-items: center;
 }
+
+@media only screen and (max-width: 800px) {
+    body {
+        margin-top: 13rem;
+        font-size: 1rem;
+    }
+    
+    .pass-generator-reset-section input {
+        font-size: inherit;
+    }
+
+    .description {
+        font-size: inherit;
+    }
+
+    button {
+        font-size: inherit;
+    }
+
+    .btn-section button {
+        display: inline-block;
+    }
+}
