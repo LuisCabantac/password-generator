@@ -1,48 +1,45 @@
-const characters = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*()_-{}[]|:;'"<.>,?`;
-let passwordEl = document.querySelector("#password-el");
+const characters = {
+  uppercase: `ABCDEFGHIJKLMNOPQRSTUVWXYZ`,
+  lowercase: `abcdefghijklmnopqrstuvwxyz`,
+  numbers: `0123456789`,
+  symbols: `!@#$%&*()_-{}[]|:;'"<.>,?`,
+};
+const passwordEl = document.querySelector("#password-el");
 
-function getRandomNumber() {
-    let randomNumber = Math.floor(Math.random() * characters.length);
-    return randomNumber;
-}
-
-function getTwelveCharacters() {
-    let password = "";
-    for (let i = 0; i < 12; i++) {
-        let generateNumber = getRandomNumber()
-        password += characters[generateNumber];
+function checkCheckbox() {
+  const checkboxes = document.querySelectorAll(".checkbox");
+  const length = Number(document.querySelector("#input-length").value);
+  let allChar = "";
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      if (checkbox.value === "capital") allChar += characters.uppercase;
+      if (checkbox.value === "small") allChar += characters.lowercase;
+      if (checkbox.value === "numbers") allChar += characters.numbers;
+      if (checkbox.value === "speccharacters") allChar += characters.symbols;
     }
-    passwordEl.value = password;
+    generate(length, allChar);
+  });
 }
 
-function getSixteenCharacters() {
-    let password = "";
-    for (let i = 0; i < 16; i++) {
-        let generateNumber = getRandomNumber()
-        password += characters[generateNumber];
-    }
-    passwordEl.value = password;
+function getRandomNumber(characters) {
+  let randomNumber = Math.floor(Math.random() * characters.length);
+  return randomNumber;
 }
 
-function getTwentyCharacters() {
-    let password = "";
-    for (let i = 0; i < 20; i++) {
-        let generateNumber = getRandomNumber()
-        password += characters[generateNumber];
-    }
-    passwordEl.value = password;
+function generate(amountChar, characters) {
+  let password = "";
+  for (let i = 0; i < amountChar; i++) {
+    let generateNumber = getRandomNumber(characters);
+    password += characters[generateNumber];
+  }
+
+  passwordEl.value = password;
 }
 
-function getTwentyFourCharacters() {
-    let password = "";
-    for (let i = 0; i < 24; i++) {
-        let generateNumber = getRandomNumber()
-        password += characters[generateNumber];
-    }
-    passwordEl.value = password;
-}
+document.querySelector("#generate").addEventListener("click", checkCheckbox);
 
-function resetPassword() {
-    let password = "";
-    passwordEl.value = password;
-}
+document.querySelector("#copy-btn").addEventListener("click", function () {
+  passwordEl.select();
+  passwordEl.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(passwordEl.value);
+});

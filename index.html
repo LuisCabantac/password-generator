@@ -13,14 +13,21 @@
         <p class="description">Generate random passwords</p>
         <form class="pass-generator-reset-section">
             <input id="password-el" type="text" placeholder="Your password will be generated here..."/>
-            <button id="reset-btn" onclick="resetPassword()">Reset</button>
+            
         </form>
-        <p class="description">Select the amount of characters that will be generated: </p>
-        <div class="btn-section">
-            <button onclick="getTwelveCharacters()">12 Characters</button>
-            <button onclick="getSixteenCharacters()">16 Characters</button>
-            <button onclick="getTwentyCharacters()">20 Characters</button>
-            <button onclick="getTwentyFourCharacters()">24 Characters</button>
+        <p class="description">Select the number and which characters that will be generated: </p>
+        <div class:"select-section">
+            <input type="number" id="input-length" value="8">
+            <input type="checkbox" class="checkbox" id="capital" value="capital" checked>
+            <label for="capital">Uppercase</label>
+            <input type="checkbox" class="checkbox" id="small" value="small" checked>
+            <label for="small">Lowercase</label>
+            <input type="checkbox" class="checkbox" id="numbers" value="numbers" checked>
+            <label for="numbers">Numbers</label>
+            <input type="checkbox" class="checkbox" id="speccharacters" value="speccharacters" checked>
+            <label for="speccharacters">Symbols</label>
+            <button id="copy-btn">COPY</button>
+            <button id="generate">GENERATE</button>
         </div>
     </body>
 </html>
