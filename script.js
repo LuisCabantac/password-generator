@@ -5,6 +5,18 @@ const characters = {
   symbols: `!@#$%&*()_-{}[]|:;'"<.>,?`,
 };
 const passwordEl = document.querySelector("#password-el");
+document
+  .querySelector("#input-length")
+  .addEventListener("change", function (event) {
+    document.querySelector("#display-length").textContent = event.target.value;
+    checkCheckbox();
+  });
+
+document.querySelectorAll(".checkbox").forEach((el) => {
+  el.addEventListener("change", function (event) {
+    checkCheckbox();
+  });
+});
 
 function checkCheckbox() {
   const checkboxes = document.querySelectorAll(".checkbox");
@@ -17,7 +29,7 @@ function checkCheckbox() {
       if (checkbox.value === "numbers") allChar += characters.numbers;
       if (checkbox.value === "speccharacters") allChar += characters.symbols;
     }
-    generate(length, allChar);
+    if (allChar !== "") generate(length, allChar);
   });
 }
 
