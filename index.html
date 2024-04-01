@@ -1,33 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="icon" href="images/lock-svgrepo-com.svg">
-        <script src="script.js" defer></script>
-        <title>Password Generator</title>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" href="images/lock-svgrepo-com.svg" />
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
         <h1>Password Generator</h1>
         <p class="description">Generate random passwords</p>
-        <form class="pass-generator-reset-section">
-            <input id="password-el" type="text" placeholder="Your password will be generated here..."/>
-            
-        </form>
-        <p class="description">Select the number and which characters that will be generated: </p>
-        <div class:"select-section">
-            <input type="number" id="input-length" value="8">
-            <input type="checkbox" class="checkbox" id="capital" value="capital" checked>
-            <label for="capital">Uppercase</label>
-            <input type="checkbox" class="checkbox" id="small" value="small" checked>
-            <label for="small">Lowercase</label>
-            <input type="checkbox" class="checkbox" id="numbers" value="numbers" checked>
-            <label for="numbers">Numbers</label>
-            <input type="checkbox" class="checkbox" id="speccharacters" value="speccharacters" checked>
-            <label for="speccharacters">Symbols</label>
-            <button id="copy-btn">COPY</button>
-            <button id="generate">GENERATE</button>
+        <div class="top-section">
+          <input
+            id="password-el"
+            type="text"
+            class="input-box"
+            placeholder="Your password will be generated here..."
+          />
+          <div>
+            <button id="generate" title="Generate">
+              <img src="./images/generate-icon.png" alt="generate password" />
+            </button>
+            <button id="copy-btn" title="Copy">
+              <img src="./images/clipboard-icon.png" alt="copy icon" />
+            </button>
+          </div>
         </div>
-    </body>
+      </div>
+      <div class="customize-pass">
+        <p class="description" id="custom">Customize your password:</p>
+        <div class="select-section">
+          <div class="range-slider">
+            <p class="description">
+              Password Length : <span id="display-length">8</span>
+            </p>
+            <input
+              type="range"
+              min="1"
+              max="50"
+              value="8"
+              class="slider"
+              id="input-length"
+            />
+          </div>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="capital"
+            value="capital"
+            checked
+          />
+          <label for="capital">Uppercase</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="small"
+            value="small"
+            checked
+          />
+          <label for="small">Lowercase</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="numbers"
+            value="numbers"
+            checked
+          />
+          <label for="numbers">Numbers</label>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="speccharacters"
+            value="speccharacters"
+            checked
+          />
+          <label for="speccharacters">Symbols</label>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        <a
+          href="https://github.com/LuisCabantac/password-generator"
+          target="_blank"
+          >&copy; 2024 LuisCabantac</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
