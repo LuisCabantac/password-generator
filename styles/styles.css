@@ -58,7 +58,7 @@ button img {
 }
 
 .slider {
-  width: 50ch;
+  width: 65ch;
   border: solid 1px #34495e;
   background-color: #d5dbdb;
   -webkit-appearance: none;
@@ -154,11 +154,12 @@ p a {
 @media only screen and (max-width: 800px) {
   body {
     margin-top: 12em;
+    width: 90%;
   }
 
   .container {
     font-size: 1rem;
-    width: 85%;
+    width: 90%;
   }
 
   .description {
@@ -171,7 +172,7 @@ p a {
   }
 
   .slider {
-    width: 80%;
+    width: 100%;
   }
 
   .top-section {
