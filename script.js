@@ -9,6 +9,7 @@ document
   .querySelector("#input-length")
   .addEventListener("change", function (event) {
     document.querySelector("#display-length").textContent = event.target.value;
+    checkStrength(event.target.value);
     checkCheckbox();
   });
 
@@ -17,6 +18,26 @@ document.querySelectorAll(".checkbox").forEach((el) => {
     checkCheckbox();
   });
 });
+
+function checkStrength(length) {
+  const displayStrength = document.querySelector("#password-strength");
+  if (length < 5) {
+    displayStrength.textContent = "Very weak";
+    displayStrength.style.backgroundColor = "#ff7800";
+  } else if (length < 8) {
+    displayStrength.textContent = "Weak";
+    displayStrength.style.backgroundColor = "#ffb370";
+  } else if (length < 10) {
+    displayStrength.textContent = "Good";
+    displayStrength.style.backgroundColor = "#ffddbf";
+  } else if (length < 12) {
+    displayStrength.textContent = "Strong";
+    displayStrength.style.backgroundColor = "#d5f2a5";
+  } else {
+    displayStrength.textContent = "Very strong";
+    displayStrength.style.backgroundColor = "#9ae437";
+  }
+}
 
 function checkCheckbox() {
   const checkboxes = document.querySelectorAll(".checkbox");

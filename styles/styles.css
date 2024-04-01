@@ -17,12 +17,20 @@ body {
 
 h1 {
   color: #2c3e50;
+  margin: 0;
 }
 
 p,
 label {
   color: #58636d;
   font-size: 1.2rem;
+}
+
+.check-strength {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
 }
 
 .input-box {
@@ -136,6 +144,18 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:hover {
   accent-color: #a0a3a3;
+}
+
+#password-strength {
+  width: 13ch;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.4em 0.8em;
+  margin: 0;
 }
 
 footer {
