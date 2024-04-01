@@ -202,4 +202,8 @@ p a {
   label {
     font-size: 0.6rem;
   }
+
+  #password-strength {
+    width: 11ch;
+  }
 }
