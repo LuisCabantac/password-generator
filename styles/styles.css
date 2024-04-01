@@ -1,9 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
+  box-sizing: border-box;
   background-color: #eaeaea;
-  padding: 10% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9em;
+}
+
+.container {
   font-size: 1.5rem;
   color: #58636d;
 }
@@ -16,79 +23,153 @@ p,
 label {
   color: #58636d;
   font-size: 1.2rem;
+  margin: 0;
 }
 
 .checkbox {
   accent-color: #d5dbdb;
 }
 
-.pass-generator-reset-section input {
+.input-box {
   border: none;
   font-size: 1.2rem;
-  padding: 6px 8px;
-  border-radius: 5px;
-  color: #ffffff;
-  background-color: #30363b;
-  width: 400px;
-  margin-right: 5px;
+  padding: 8px 0;
+  border-radius: 18px;
+  color: #30363b;
+  background-color: #d5dbdb;
+  width: 35ch;
+  font-family: inherit;
 }
 
 button {
   color: #ffffff;
-  background-color: #34495e;
+  background-color: #d5dbdb;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
-  padding: 0.5rem 1rem;
-  margin: 5px 5px 5px 0;
+  cursor: pointer;
 }
 
-button:hover {
-  background-color: #2e4255;
+button img {
+  width: 1.2ch;
 }
 
-button:active {
-  background-color: #2b3c4d;
+#generate {
+  margin: 0;
 }
 
-.pass-generator-reset-section {
+.range-slider {
+  margin: 1em 0;
+}
+
+.slider {
+  width: 50ch;
+  border: solid 1px #34495e;
+  background-color: #d5dbdb;
+  -webkit-appearance: none;
+  height: 4px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 10px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #34495e;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #34495e;
+  cursor: pointer;
+}
+
+.top-section {
+  margin: 5px 0;
+  padding: 0.6em;
+  background-color: #d5dbdb;
+  border-radius: 18px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
-input {
-  background-color: #d5dbdb;
+input:focus {
+  outline: none;
 }
 
-#input-length {
-  height: 3ch;
-  width: 5ch;
-  border: solid 1px #2c3e50;
-  border-radius: 3px;
-  background-color: #d5dbdb;
+.select-section {
+  color: #2b3c4d;
+}
+
+.customize-pass {
+  margin-top: 1em;
+}
+
+#custom {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+footer p,
+p a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #30363b;
 }
 
 @media only screen and (max-width: 800px) {
   body {
-    margin-top: 3em;
-    font-size: 1rem;
+    margin-top: 12em;
   }
 
-  .pass-generator-reset-section input {
-    font-size: inherit;
+  .container {
+    font-size: 0.9rem;
+    width: 85%;
   }
 
   .description {
     font-size: inherit;
   }
 
-  input,
-  button {
-    display: block;
+  .input-box {
+    width: 24ch;
     font-size: inherit;
   }
 
-  .btn-section button {
-    display: inline-block;
+  .slider {
+    width: 80%;
+  }
+
+  .top-section {
+    width: 100%;
+  }
+
+  label {
+    font-size: inherit;
+  }
+
+  button {
+    font-size: inherit;
   }
 }
