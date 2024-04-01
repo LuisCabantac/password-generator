@@ -1,5 +1,5 @@
 # Password Generator
 
-A JavaScript website that generate random passwords from 12 to 24 characters.
+A JavaScript password generator.
 
 https://luiscabantac.github.io/password-generator/
