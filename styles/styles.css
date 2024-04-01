@@ -23,11 +23,6 @@ p,
 label {
   color: #58636d;
   font-size: 1.2rem;
-  margin: 0;
-}
-
-.checkbox {
-  accent-color: #d5dbdb;
 }
 
 .input-box {
@@ -125,6 +120,24 @@ input:focus {
   margin-bottom: 0.5em;
 }
 
+.checkbox {
+  accent-color: #cacfcf;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  padding: 10px;
+}
+
+input[type="checkbox"]:hover {
+  accent-color: #a0a3a3;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -144,7 +157,7 @@ p a {
   }
 
   .container {
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 85%;
   }
 
@@ -166,10 +179,6 @@ p a {
   }
 
   label {
-    font-size: inherit;
-  }
-
-  button {
-    font-size: inherit;
+    font-size: 0.6rem;
   }
 }
