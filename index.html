@@ -6,29 +6,33 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" href="images/lock-svgrepo-com.svg" />
     <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <title>Password Generator</title>
   </head>
   <body>
     <div class="container">
       <div>
         <h1>Password Generator</h1>
+        <p class="description">Create Strong, Unique Passwords Instantly</p>
         <div class="check-strength">
-          <p class="description">Generate random passwords</p>
+          <p>Generated password:</p>
           <p id="password-strength"></p>
         </div>
         <div class="top-section">
-          <input
-            id="password-el"
-            type="text"
-            class="input-box"
-            placeholder="Your password will be generated here..."
-          />
+          <input id="password-el" type="text" class="input-box" />
           <div>
             <button id="generate" title="Generate">
-              <img src="./images/generate-icon.png" alt="generate password" />
+              <span class="material-symbols-outlined"> restart_alt </span>
             </button>
             <button id="copy-btn" title="Copy">
-              <img src="./images/clipboard-icon.png" alt="copy icon" />
+              <span class="material-symbols-outlined"> content_copy </span>
             </button>
           </div>
         </div>

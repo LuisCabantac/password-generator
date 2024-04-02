@@ -158,6 +158,25 @@ input[type="checkbox"]:hover {
   margin: 0;
 }
 
+.check-strength {
+  font-weight: 600;
+  color: #30363b;
+  margin: 0 0 8px;
+}
+
+.check-strength p {
+  margin: 8px 0;
+}
+
+.material-symbols-outlined {
+  margin: 5px 0;
+  color: #30363b;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -205,5 +224,9 @@ p a {
 
   #password-strength {
     width: 11ch;
+  }
+
+  input::placeholder {
+    font-size: 0.8rem;
   }
 }
