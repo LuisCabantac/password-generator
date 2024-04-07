@@ -50,10 +50,10 @@ function checkCheckbox() {
       if (checkbox.value === "small") allChar += characters.lowercase;
       if (checkbox.value === "numbers") allChar += characters.numbers;
       if (checkbox.value === "speccharacters") allChar += characters.symbols;
+      checkStrength(passwordStrength);
     }
     if (allChar !== "") generate(length, allChar);
   });
-  checkStrength(passwordStrength);
 }
 
 function getRandomNumber(characters) {
