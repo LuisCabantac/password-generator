@@ -4,12 +4,13 @@ const characters = {
   numbers: `0123456789`,
   symbols: `!@#$%&*()_-{}[]|:;'"<.>,?`,
 };
+let passwordStrength = 0;
 const passwordEl = document.querySelector("#password-el");
 document
   .querySelector("#input-length")
   .addEventListener("change", function (event) {
     document.querySelector("#display-length").textContent = event.target.value;
-    checkStrength(event.target.value);
+    passwordStrength = event.target.value;
     checkCheckbox();
   });
 
@@ -52,6 +53,7 @@ function checkCheckbox() {
     }
     if (allChar !== "") generate(length, allChar);
   });
+  checkStrength(passwordStrength);
 }
 
 function getRandomNumber(characters) {
