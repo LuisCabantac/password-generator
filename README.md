@@ -9,4 +9,4 @@ Generate strong, unique passwords instantly. The interface provides various cust
 
 ## Screenshots
 
-![password-generator](https://github.com/LuisCabantac/password-generator/assets/151472373/bdbdab7c-a981-4117-9b49-bc8b2e66822e)
+![password-generator](https://github.com/LuisCabantac/password-generator/assets/151472373/35da3f91-4cad-45ab-ba0b-160871caa333)
