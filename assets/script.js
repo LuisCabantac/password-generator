@@ -1,9 +1,3 @@
-const characters = {
-  uppercase: `ABCDEFGHIJKLMNOPQRSTUVWXYZ`,
-  lowercase: `abcdefghijklmnopqrstuvwxyz`,
-  numbers: `0123456789`,
-  symbols: `!@#$%&*()_-{}[]|:;'"<.>,?`,
-};
 let passwordStrength = 0;
 const passwordEl = document.querySelector("#password-el");
 document
@@ -43,6 +37,12 @@ function checkStrength(length) {
 function checkCheckbox() {
   const checkboxes = document.querySelectorAll(".checkbox");
   const length = Number(document.querySelector("#input-length").value);
+  const characters = {
+    uppercase: `ABCDEFGHIJKLMNOPQRSTUVWXYZ`,
+    lowercase: `abcdefghijklmnopqrstuvwxyz`,
+    numbers: `0123456789`,
+    symbols: `!@#$%&*()_-{}[]|:;'"<.>,?`,
+  };
   let allChar = "";
   checkboxes.forEach(function (checkbox) {
     if (checkbox.checked) {
