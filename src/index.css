@@ -13,6 +13,7 @@ body {
 .container {
   font-size: 1.5rem;
   color: #58636d;
+  position: relative;
 }
 
 h1 {
@@ -131,6 +132,7 @@ input:focus {
 .checkbox {
   accent-color: #cacfcf;
   vertical-align: middle;
+  margin: 0.9rem;
 }
 
 input[type="checkbox"] {
@@ -179,7 +181,8 @@ input::placeholder {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: -7rem;
+  right: 11.5rem;
   text-align: center;
 }
 
@@ -193,7 +196,7 @@ p a {
 @media only screen and (max-width: 800px) {
   body {
     margin-top: 12em;
-    width: 90%;
+    width: 100%;
   }
 
   .container {
@@ -222,11 +225,20 @@ p a {
     font-size: 0.6rem;
   }
 
+  .checkbox {
+    margin: 0.7rem;
+  }
+
   #password-strength {
     width: 11ch;
   }
 
   input::placeholder {
     font-size: 0.8rem;
+  }
+
+  footer {
+    bottom: -25rem;
+    right: 4.5rem;
   }
 }
